@@ -18,8 +18,7 @@ node {
 			You would need to first register with DockerHub before you can push images to your account
 		*/
         docker.withRegistry('http://ec2-18-223-22-48.us-east-2.compute.amazonaws.com:5000') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+            app.push()
             } 
                 echo "Trying to Push Docker Build to DockerHub"
     }
