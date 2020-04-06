@@ -20,7 +20,7 @@ node {
         docker.withRegistry('18.223.22.48:5000') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
-            // } 
+            } 
                 echo "Trying to Push Docker Build to DockerHub"
     }
 }
